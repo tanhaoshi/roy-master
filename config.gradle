@@ -1,0 +1,32 @@
+ext{
+    android = [
+            compileSdkVersion :  27,
+            buildToolsVersion :  "27.0.3",
+            minSdkVersion     :  15,
+            targetSdkVersion  :  27,
+            versionCode       :  1,
+            versionName       :  "1.0.1"
+    ]
+
+    version = [
+            androidSupportSdkVersion   : "27.1.1",
+            constraintLayoutSdkVersion : "1.1.3",
+            butterknifeSdkVersion      : "8.8.1",
+            espressoSdkVersion         : "3.0.2"
+    ]
+
+    dependencies = [
+            // test
+            "junit"               : "junit:junit:4.12",
+            "runner"              : "com.android.support.test:runner:1.0.2",
+            "espresso-core"       : "com.android.support.test.espresso:espresso-core:${version.espressoSdkVersion}",
+
+            //view
+            "butterknife"         : "com.jakewharton:butterknife:${version.butterknifeSdkVersion}",
+            "butterknifecompiler" : "com.jakewharton:butterknife-compiler:${version.butterknifeSdkVersion}",
+
+           //androidSupportSdkVersion
+            "androidSupport"      : "com.android.support:appcompat-v7:${version.androidSupportSdkVersion}",
+            "constraintLayout"    : "com.android.support.constraint:constraint-layout:${version.constraintLayoutSdkVersion}"
+    ]
+}
