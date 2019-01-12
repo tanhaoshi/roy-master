@@ -14,7 +14,12 @@ ext{
             butterknifeSdkVersion      : "8.8.1",
             espressoSdkVersion         : "3.0.2",
             dagger2SdkVersion          : "2.15",
-            dagger2Annotation          : "10.0-b28"
+            dagger2Annotation          : "10.0-b28",
+            recyclerviewVersion        : "27.+",
+            rxJava2AndrxAndroidVersion : "2.0.1",
+            retrofit2Version           : "2.0.2",
+            retrofit2GsonVersion       : "2.1.0",
+            retrofit2AdapterVersion    : "2.3.0"
     ]
 
     dependencies = [
@@ -37,6 +42,18 @@ ext{
             "dagger2-android-support"   : "com.google.dagger:dagger-android-support:${version.dagger2SdkVersion}",
             "dagger2-compiler"          : "com.google.dagger:dagger-compiler:${version.dagger2SdkVersion}",
             "dagger2-android-processor" : "com.google.dagger:dagger-android-processor:${version.dagger2SdkVersion}",
-            "dagger2-annotation"        : "org.glassfish:javax.annotation:${version.dagger2Annotation}"
+            "dagger2-annotation"        : "org.glassfish:javax.annotation:${version.dagger2Annotation}",
+
+            // recyclerview
+            "recyclerview"              : "com.android.support:recyclerview-v7:${version.recyclerviewVersion}",
+
+            //rxjava and rxandroid
+            "rxJava"                    : "io.reactivex.rxjava2:rxjava:${version.rxJava2AndrxAndroidVersion}",
+            "rxAndroid"                 : "io.reactivex.rxjava2:rxandroid:${version.rxJava2AndrxAndroidVersion}",
+
+            //retrofit
+            "retrofit"                  : "com.squareup.retrofit2:retrofit:${version.retrofit2Version}",
+            "retrofit2Gson"             : "com.squareup.retrofit2:converter-gson:${version.retrofit2GsonVersion}",
+            "retrofit2Adapter"          : "com.squareup.retrofit2:adapter-rxjava2:${version.retrofit2AdapterVersion}"
     ]
 }
