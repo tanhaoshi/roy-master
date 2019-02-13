@@ -2,7 +2,7 @@ ext{
     android = [
             compileSdkVersion :  27,
             buildToolsVersion :  "27.0.3",
-            minSdkVersion     :  15,
+            minSdkVersion     :  16,
             targetSdkVersion  :  27,
             versionCode       :  1,
             versionName       :  "1.0.1"
@@ -19,7 +19,10 @@ ext{
             rxJava2AndrxAndroidVersion : "2.0.1",
             retrofit2Version           : "2.0.2",
             retrofit2GsonVersion       : "2.1.0",
-            retrofit2AdapterVersion    : "2.3.0"
+            retrofit2AdapterVersion    : "2.3.0",
+            nettyVersion               : "4.1.31.Final",
+            materialDialogs            : "0.9.6.0",
+            materialProgressbar        : "1.4.2"
     ]
 
     dependencies = [
@@ -54,6 +57,15 @@ ext{
             //retrofit
             "retrofit"                  : "com.squareup.retrofit2:retrofit:${version.retrofit2Version}",
             "retrofit2Gson"             : "com.squareup.retrofit2:converter-gson:${version.retrofit2GsonVersion}",
-            "retrofit2Adapter"          : "com.squareup.retrofit2:adapter-rxjava2:${version.retrofit2AdapterVersion}"
+            "retrofit2Adapter"          : "com.squareup.retrofit2:adapter-rxjava2:${version.retrofit2AdapterVersion}",
+
+            //netty
+            "netty"                     : "io.netty:netty-all:${version.nettyVersion}",
+
+            //dialog
+            "materialDialog"            : "com.afollestad.material-dialogs:core:${version.materialDialogs}",
+
+            //progress
+            "materialProgress"          : "me.zhanghai.android.materialprogressbar:library:${version.materialProgressbar}"
     ]
 }

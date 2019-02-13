@@ -21,6 +21,7 @@ public class MainActivity extends BaseActivity {
     public void initView() {
         super.initView();
         ProxyImplTest.getInstance().createService(IApi.class)
-                .getNetworkEntrance("TANHAOSHI","15367257793");
+                .getNetworkEntrance("TANHAOSHI","15367257793")
+        ;
     }
 }

@@ -36,6 +36,10 @@ dependencies {
     implementation rootProject.ext.dependencies["retrofit"]
     implementation rootProject.ext.dependencies["retrofit2Gson"]
     implementation rootProject.ext.dependencies["retrofit2Adapter"]
+//    implementation group: 'io.netty', name: 'netty-all', version: '4.1.31.Final'
+    implementation rootProject.ext.dependencies["netty"]
+//    implementation rootProject.ext.dependencies["materialDialog"]
+    implementation rootProject.ext.dependencies["materialProgress"]
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
     annotationProcessor rootProject.ext.dependencies["butterknifecompiler"]
     testImplementation rootProject.ext.dependencies["junit"]
