@@ -5,4 +5,12 @@
     <string name="contacts">通讯录</string>
     <string name="discover">发现</string>
     <string name="me">我</string>
+
+    <string name="about">About</string>
+
+    <string name="testName">谭浩世</string>
+    <string name="testPwd">15367257793</string>
+
+    <string name="singleChoiceTitle">Single Choice</string>
+    <string name="md_choose_label">Choose</string>
 </resources>

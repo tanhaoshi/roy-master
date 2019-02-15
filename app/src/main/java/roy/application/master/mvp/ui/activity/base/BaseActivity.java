@@ -21,17 +21,14 @@ public abstract class BaseActivity extends AppCompatActivity implements IActivit
 
     @Override
     public void setupActivityCompenent() {
-
     }
 
     @Override
     public void initView() {
-
     }
 
     @Override
     public void initData() {
-
     }
 
 }
