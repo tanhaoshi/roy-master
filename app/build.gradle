@@ -36,6 +36,7 @@ dependencies {
     implementation rootProject.ext.dependencies["retrofit"]
     implementation rootProject.ext.dependencies["retrofit2Gson"]
     implementation rootProject.ext.dependencies["retrofit2Adapter"]
+    implementation 'com.github.zhaokaiqiang.klog:library:1.6.0'
 //    implementation group: 'io.netty', name: 'netty-all', version: '4.1.31.Final'
     implementation rootProject.ext.dependencies["netty"]
 //    implementation rootProject.ext.dependencies["materialDialog"]
