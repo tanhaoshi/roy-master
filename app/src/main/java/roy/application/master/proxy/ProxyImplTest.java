@@ -33,6 +33,10 @@ public final class ProxyImplTest {
         return sProxyImplTest;
     }
 
+    /**  假设创建 neety + rxandroid 起步应该如何,首先应当从retrofit 中得create方法下手。需要自己创建callExecuteObservable么？还是需要创建得,不然当方法执行完毕
+     *   后,还是会执行到retrofit当中去 我得步骤应该是创建我自己的retrofit
+     * */
+
     public <T> T createService(final Class<T> service){
         return (T) Proxy.newProxyInstance(service.getClassLoader(), new Class<?>[]{service}, new InvocationHandler() {
             @Override
