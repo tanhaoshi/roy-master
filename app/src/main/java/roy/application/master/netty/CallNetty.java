@@ -1,6 +1,5 @@
-package roy.application.master.netty.adapter;
+package roy.application.master.netty;
 
-import android.telecom.Call;
 
 public interface CallNetty<T> extends Cloneable{
 
@@ -9,4 +8,6 @@ public interface CallNetty<T> extends Cloneable{
     CallNetty<T> clone();
 
     boolean isCanceled();
+
+    void execute();
 }

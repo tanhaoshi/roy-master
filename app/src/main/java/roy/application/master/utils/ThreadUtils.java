@@ -2,6 +2,8 @@ package roy.application.master.utils;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.support.annotation.IntRange;
+import android.support.annotation.IntegerRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -32,6 +34,12 @@ public final class ThreadUtils {
      * 3.通过了ConcurrentHashMap来保存我们的线程池,避免资源浪费。为什么采用ConcurrentHashMap来保存我们的线程池呢？
      * 因为ConcurrentHashMap是线程安全的。主要核心线程安全原理:它底层实现采用了红黑树，通过两个数组分别保存不同的key值，
      * 避免synchronously多次使用造成阻塞。
+     *
+     * 线程池四种选择方式的优缺点:
+     * 1.newCachedThreadPool     执行很多短期异步的小程序或者负载较轻的服务器
+     * 2.newFixedThreadPool      执行长期的任务,性能好很多
+     * 3.newSingleThreadExecutor 一个任务一个任务执行的场景
+     * 4.newScheduledThreadPool  周期性执行任务的场景
      */
     private static final Map<Integer,Map<Integer,ExecutorService>> TYPE_PRIORITY_POOLS =
             new ConcurrentHashMap<>();
@@ -60,6 +68,22 @@ public final class ThreadUtils {
      */
     public static boolean isMainThread(){
         return Looper.myLooper() == Looper.getMainLooper();
+    }
+
+    /**
+     * Return a thread pool that reuses a fixed number of threads
+     * operating off a shared unbounded queue, using the provided
+     * ThreadFactory to create new threads when needed.
+     *
+     * @param size The size of thread in the pool
+     * @return a fixed thread pool
+     */
+    public static ExecutorService getFixedPool(@IntRange(from = 1)final int size){
+        return getPoolByTypeAndPriority(size);
+    }
+
+    private static ExecutorService getPoolByTypeAndPriority(final int type){
+        return getPoolByTypeAndPrioity(type,Thread.NORM_PRIORITY);
     }
 
     private static ExecutorService getPoolByTypeAndPrioity(final int type,final int priority){

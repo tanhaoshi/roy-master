@@ -5,12 +5,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.socks.library.KLog;
+
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import roy.application.master.R;
 import roy.application.master.mvp.ui.activity.base.BaseActivity;
+import roy.application.master.netty.NettyProxyAccess;
 import roy.application.master.proxy.IApi;
-import roy.application.master.proxy.ProxyImplTest;
 import roy.application.master.widget.MaterialDialog;
 
 public class MainActivity extends BaseActivity {
@@ -21,36 +23,33 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    public void setupActivityCompenent() {
-        super.setupActivityCompenent();
-    }
-
-    @Override
     public void initView() {
         super.initView();
-        ProxyImplTest.getInstance().createService(IApi.class)
-                .getNetworkEntrance(getString(R.string.testName),getString(R.string.testPwd))
-        .subscribe(new Observer() {
-            @Override
-            public void onSubscribe(Disposable d) {
+        /** 这个过程封装数据返回 如何才能将数据返回至next层 */
+        NettyProxyAccess.getInstance().
+                createService(IApi.class).
+                getNetworkEntrance(getString(R.string.testName),getString(R.string.testPwd))
+                .subscribe(new Observer() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
 
-            }
+                    }
 
-            @Override
-            public void onNext(Object value) {
+                    @Override
+                    public void onNext(Object value) {
+                        KLog.i("The process is running");
+                    }
 
-            }
+                    @Override
+                    public void onError(Throwable e) {
 
-            @Override
-            public void onError(Throwable e) {
+                    }
 
-            }
+                    @Override
+                    public void onComplete() {
 
-            @Override
-            public void onComplete() {
-
-            }
-        });
+                    }
+                });
     }
 
     @Override

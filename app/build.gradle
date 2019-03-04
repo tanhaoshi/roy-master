@@ -36,11 +36,11 @@ dependencies {
     implementation rootProject.ext.dependencies["retrofit"]
     implementation rootProject.ext.dependencies["retrofit2Gson"]
     implementation rootProject.ext.dependencies["retrofit2Adapter"]
-    implementation 'com.github.zhaokaiqiang.klog:library:1.6.0'
 //    implementation group: 'io.netty', name: 'netty-all', version: '4.1.31.Final'
     implementation rootProject.ext.dependencies["netty"]
-//    implementation rootProject.ext.dependencies["materialDialog"]
     implementation rootProject.ext.dependencies["materialProgress"]
+    implementation rootProject.ext.dependencies["fastjson"]
+    implementation rootProject.ext.dependencies["logcat"]
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
     annotationProcessor rootProject.ext.dependencies["butterknifecompiler"]
     testImplementation rootProject.ext.dependencies["junit"]
