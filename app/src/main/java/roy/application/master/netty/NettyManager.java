@@ -2,7 +2,6 @@ package roy.application.master.netty;
 
 
 import com.alibaba.fastjson.JSON;
-import io.netty.buffer.ByteBufInputStream;
 
 public class NettyManager implements CallBack{
 

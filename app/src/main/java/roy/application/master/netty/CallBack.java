@@ -1,10 +1,10 @@
 package roy.application.master.netty;
 
- interface CallBack {
+ interface CallBack<T> {
 
     void onRequest(NettyRequest nettyRequest);
 
-    void onResponse(NettyResponse nettyResponse);
+    void onResponse(NettyResponse<T> nettyResponse);
 
     void onFailure(Throwable errorMessage);
 
