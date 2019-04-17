@@ -8,7 +8,7 @@ bit of android learning . so the project is just for recording my mistakes and l
 THE RECORDER
 
 Android 一些常见的算法
-<!-- https://www.jianshu.com/p/9648e8dd5bdb -->
+https://www.jianshu.com/p/9648e8dd5bdb
 
 Android 一些面试上及需要学习的知识重点
-<!-- http://www.importnew.com/27326.html#comment-763344 -->
+http://www.importnew.com/27326.html#comment-763344
