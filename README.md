@@ -12,3 +12,6 @@ https://www.jianshu.com/p/9648e8dd5bdb
 
 Android 一些面试上及需要学习的知识重点
 http://www.importnew.com/27326.html#comment-763344
+
+//对象池复用
+https://blog.csdn.net/self_study/article/details/51477002
