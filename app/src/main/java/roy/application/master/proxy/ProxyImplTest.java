@@ -1,6 +1,8 @@
 package roy.application.master.proxy;
 
 
+import android.util.Log;
+
 import com.socks.library.KLog;
 
 import java.lang.annotation.Annotation;
@@ -9,6 +11,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 import roy.application.master.annotation.Dispense;
+import roy.application.master.annotation.Param;
 
 /**
  * THE AUTHOR : TANHAOSHI
